@@ -134,7 +134,7 @@ namespace aspnetapp.Controllers
         
         // GET: api/count
         [HttpGet]
-        public async Task<ActionResult<WXBizDataCrypt>> GetCounter(CounterRequest data)
+        public async Task<ActionResult<WXBizDataCrypt>> GetdecryptData(CounterRequest data)
         {
             string outdata = "";
             new WXBizDataCrypt("ad7a00aefcf354ecc7343fd0c130c7c1").decryptData(data.encryptedData, data.iv, out outdata);
